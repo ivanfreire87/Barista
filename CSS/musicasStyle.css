@@ -1,0 +1,295 @@
+.musica{
+	font-size:15px;
+    border:3px solid transparent;
+    text-align:center;
+    white-space: nowrap;
+    display:inline;
+    margin-top:10px;
+    margin-left:50px;
+    float:left;
+    position:relative;
+    width:50px;
+    height:50px;
+    z-index:7;
+    cursor:pointer;
+}
+
+
+#divMusicasButton{
+    border-top-right-radius:50%;
+    border-bottom-right-radius:50%;
+    background: #171717;
+    border: 2px solid black;
+    border-left: 0px;
+    float:left;
+    width:34px;
+    height:265px;
+    text-align:left;
+    margin-top:46px;
+    position:absolute;
+	z-index:30;
+    font-size:20px;
+    cursor:pointer;
+}
+
+
+
+.titulo{
+	font-size: 25px;
+	position: absolute;
+	margin-top: 15px;
+	margin-left: 350px;
+	z-index: 1;
+}
+/*
+.divMusicas{	
+    overflow:no-display;
+    border-radius: 15px;
+    background-image:url(../pics/fundoMenu.png);
+    font-size:29px;
+    text-align:center;    
+    border:2px solid black;
+    width:795px;
+    height:510px;
+    margin-top:8px;
+    margin-left:19px;
+    position:absolute;
+    display:none;
+    z-index:4;
+}*/
+
+.votos{
+    color: white;
+}
+
+.divMusicas{	
+    overflow:hidden;
+    border-radius: 15px;
+    background-image:url(../pics/fundoMenu.png);
+    font-size:29px;
+    text-align:center;    
+    border:2px solid black;
+    width:795px;
+    height:265px;
+    margin-top:46px;
+    margin-left:19px;
+    position:absolute;
+    display:none;
+    z-index:4;
+}
+
+
+.listaMusicas{
+
+	margin-top:50px;
+	position: absolute;
+
+}
+
+.divMusicasSeguintes{
+    text-align:center;    
+    width:315px;
+    height:200px;
+    margin-top:210px;
+    margin-left:50px;
+    position:absolute;
+    z-index:1;
+    display:none;   
+}
+
+
+
+#divMusicasInfo{
+    background-image:url(../pics/fundoInfoMusicas.png);
+    border:2px solid black;    
+    width:335px;
+    height:280px;
+    margin-top:210px;
+    margin-left:430px;
+    position:relative;
+    z-index:3;
+    display:none;
+}
+
+#musicaPic{
+    position:absolute;
+    border:2px solid black;
+    width:80px;
+    height:80px;
+    margin-top:15px;
+    margin-left:15px;
+}
+
+#musicaArtista{
+    background-image:url(../pics/fundoMenu.png);
+    position:absolute;
+    font-size:15px;
+    border:2px solid black;
+    width:200px;
+    height:25px;
+    margin-top:15px;
+    margin-left:110px;
+}
+
+#musicaNome{
+    background-image:url(../pics/fundoMenu.png);
+    position:absolute;
+    font-size:11px;
+    border:2px solid black;
+    width:200px;
+    height:25px;
+    margin-top:46px;
+    margin-left:110px;
+}
+
+#artistaInfo{
+    background-color:white;
+    position:absolute;
+    overflow:auto;
+    border:2px solid black;
+    width:200px;
+    height:170px;
+    margin-top:90px;
+    margin-left:110px;
+}
+
+#textoMusicasSeguintes{   
+    font-size: 19px;
+    position:absolute;
+    z-index:1;
+    margin-top:-10px;
+}
+
+.listaPedidoMusica{
+    font-size:17px;
+    padding:4px;
+    overflow: auto;
+    background:white;
+    border:2px solid black;
+    width:350px;
+    height:212px;
+    z-index:5;
+    position:absolute;
+    margin-top:40px;
+}
+
+.listaAleatorio{
+    font-size:17px;
+    padding:4px;
+    overflow: auto;
+    background:white;
+    border:2px solid black;
+    width:350px;
+    height:212px;
+    z-index:5;
+    display:none;
+    position:absolute;
+    margin-top:40px;
+}
+
+#voltarMenuMusica{
+    font-size:15px;
+    position:absolute;
+    margin-top:8px;
+    margin-left:19px;
+    display:none;
+    z-index:2;
+    cursor:pointer;
+}
+
+.sairMusicas{
+    width:25px;
+    height:25px;
+    position:absolute;
+    margin-top:5px;
+    margin-left:5px;
+    display:none;
+    z-index:2;
+    cursor:pointer;
+    font-size:19px;
+}
+
+
+#jukebox{
+    background-image:url(../pics/jukebox.png);
+    background-size: cover;
+    width: 270px;
+    height: 420px;
+    position: absolute;
+    margin-left:315px;
+    margin-top:200px;
+
+}
+
+#jukebox #musicaNomeToca{
+    width:165px;
+    height:30px; 
+    position: absolute;
+    top: 188px;
+    left: 50px;
+    font-size: 6px;
+    text-align:center;
+}
+
+
+#jukebox h2 {
+    position: absolute;
+    top: 138px;
+    left: 100px;
+    font-size: 17px;
+}
+ 
+#jukebox .cover{
+    position: absolute;
+    width:80px;
+    height:80px; 
+    left: 98px;
+    top: 235px;
+}
+
+#jukebox .timer{
+    position: absolute;
+    color: white;
+    left: 117px;
+    top: 330px;
+    font-size: 17px;
+}
+/*audio player*/
+
+#musicatopo {
+    background-image:url(../pics/fundoMenu.png);
+    position: absolute;
+    width: 380px;
+    height: 80px;
+    margin-left:270px;
+    margin-top:2px; 
+    border-radius: 3px;
+    display:none;
+}
+
+#musicatopo h1 {
+    position: absolute;
+    top: 25px;
+    left: 120px;
+    font-size: 14px;
+}
+
+#musicatopo h2 {
+    position: absolute;
+    top: 0px;
+    left: 120px;
+    font-size: 14px;
+}
+ 
+#musicatopo .cover{
+    position: absolute;
+    width:80px;
+    height:80px;   
+}
+
+#musicatopo .timer{
+    color: white;
+    margin-left:120px;
+    font-size: 14px;
+    margin-top: 55px;
+}

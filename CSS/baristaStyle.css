@@ -1,0 +1,192 @@
+﻿#ecra{
+    width:900px;
+    height:620px;
+    border:4px solid black;
+    position:relative;
+    background-image:url(../pics/fundoMesa.jpg);
+    background-size: contain;
+	font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: black;
+    text-shadow: 1px 1px 1px rgba(0,0,0, .5);
+}
+
+#help{
+    width:906px;
+    height:626px;
+    position:absolute;
+    background-image:url(../pics/AjudaPrincipal.png);
+    background-color:transparent;
+
+    z-index:31;
+    display:none;
+}
+
+#ecraInicial{
+    width:900px;
+    height:620px;
+    border:3px solid black;
+    position:relative;
+    background-image:url(../pics/fundoMesa.jpg);
+    background-size: contain;
+	font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: black;
+    text-shadow: 1px 1px 1px rgba(0,0,0, .5);
+}
+
+#miniEcra {
+    background-size: cover;
+    background-image:url(../pics/barista.jpg);
+    width:300px;
+    height:206.6666666667px;
+    border: 3px solid black;
+    display:none;
+
+}
+
+#divJukebox{
+    border-radius:30%;
+    width:210px;
+    height:300px;
+    position:absolute;
+    bottom:0px;
+    margin-left:320px;
+    margin-bottom:-6px;
+}
+#botaoMenu{
+	font-weight:bold;
+	margin-top: 120px;
+	transform:rotate(270deg);
+	-ms-transform:rotate(270deg); /* IE 9 */
+	-webkit-transform:rotate(270deg);
+}
+
+#botaoMusicas{
+	font-weight:bold;
+	margin-top: 100px;
+	transform:rotate(90deg);
+	-ms-transform:rotate(90deg); /* IE 9 */
+	-webkit-transform:rotate(90deg);
+}
+
+#conta{
+	position:absolute;
+    margin-top:50px;
+    margin-left:90px;
+    z-index:30;
+	width:120px;
+    height:34px;
+    cursor:pointer;
+}
+
+.sairConta{
+	position:absolute;
+    margin-top:10px;
+    margin-left:330px;
+    z-index:15;
+    cursor:pointer;
+}
+
+/*scroll horizontal*/
+.listaOuter{
+    
+    overflow-x:auto;
+    overflow-y:hidden;
+    text-align:center;
+    border:2px solid black;
+    position:absolute;
+    background-color:white;
+    margin-top:61px;
+    margin-left:110px;
+    width:580px;
+    height:130px;
+    z-index:2;  
+}
+
+/*tamanho = nr de produtos * 136*/
+.listaInner{
+    text-align:center;
+    position:absolute;
+    background-color:white;
+    width:630px;
+    height:130px;
+    z-index:2; 	
+}
+
+.botao{
+    width:100px;
+    height:34px;
+    position:absolute;
+}
+
+
+#ajuda{
+    margin-top: 10px; 
+    margin-left: 830px;
+    cursor:pointer;
+}
+
+.button{
+    width: auto;
+    height : auto;
+    max-height:100%;
+    max-width:100%;
+}
+.letraMenu{
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: black;
+    text-shadow: 1px 1px 1px rgba(0,0,0, .5);
+}
+
+.letra{
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #ececec;
+    text-shadow: 1px 1px 1px rgba(0,0,0, .5);
+}
+
+
+#divConta{
+	position:absolute;
+	margin-top:100px;
+	margin-left:282px;
+	border: 2px solid black;
+	width:350px;
+    height:450px;
+	display: none;
+	background-image:url(../pics/fundoMenu.png);
+
+}
+
+#listaConta{
+	position:absolute;
+	margin-top:0px;
+	margin-left:45px;
+	border: 2px solid black;
+	width:250px;
+    height:300px;
+	overflow: auto;
+	background-color: white;
+
+}
+#pagarConta{
+    display:none;
+	position:absolute;
+	margin-top: 350px;
+	margin-left:200px;
+    z-index:15;
+
+}
+
+#divTotalConta{
+	position:absolute;
+	margin-top:325px;
+	margin-left:42px;
+
+}
+
+
+
+ 

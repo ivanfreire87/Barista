@@ -1,0 +1,398 @@
+.produto{
+    font-size:15px;
+    border:3px solid transparent;
+    text-align:center;
+    white-space: nowrap;
+    display:inline;
+    margin-top:10px;
+    margin-left:50px;
+    float:left;
+    position:relative;
+    width:68px;
+    height:45px;
+    z-index:7;
+    cursor:pointer;
+}
+
+.menu{
+    width: 800px;
+    height : 300px;
+}
+
+#divMenuButton{
+    border-top-left-radius:50%;
+    border-bottom-left-radius:50%;
+    background: #171717;
+    border: 2px solid black;
+    border-right: 0px;
+    float:right;
+    width:34px;
+    height:265px;
+    text-align:center;
+    margin-top:46px;
+    z-index:30;
+    position:relative;
+    font-size:20px;
+    cursor:pointer;
+}
+
+.tituloMenu{
+    margin-top:10px;
+    position:absolute;
+    text-align:center;
+    width:790px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #ececec;
+    text-shadow: 1px 1px 1px rgba(0,0,0, .5);
+}
+
+.divMenu{
+    border-radius: 15px;
+    background-image:url(../pics/fundoMenu.png);
+    font-size:29px;    
+    border:2px solid black;
+    width:820px;
+    height:265px;
+    margin-top:46px;
+    margin-left:67px;
+    position:absolute;
+    display:none;
+    z-index:1;
+}
+
+/*PEDIDO*/
+#divPedido{
+    overflow-y:auto;
+    width:826px;
+    height:208px;
+    margin-top:316px;
+    margin-left:72px;
+    position:absolute;
+    z-index:4;
+    display:none;
+}
+
+#divPedidoIn{
+    border-radius: 15px;
+    background-image:url(../pics/fundoMenu.png);
+    border:2px solid black;
+    width:600px;
+    height:208px;
+    margin-top:-2px;
+    margin-left:-2px;
+    position:absolute;
+    z-index:4;
+}
+
+#divPedidoVazio{
+    border-radius: 15px;
+    background-image:url(../pics/fundoMenu.png);
+    border:2px solid black;
+    width:600px;
+    height:208px;
+    margin-top:-2px;
+    margin-left:-2px;
+    position:absolute;
+    z-index:4;
+    display:none;
+}
+
+#listaPedido {
+    overflow: auto;
+    background-image:url(../pics/caderno.jpg);
+    border:2px solid black;
+    width:338px;
+    height:140px;
+    z-index:5;
+    position:absolute;
+    margin-top:-10px;
+    margin-left:15px;
+    padding:5px;
+}
+
+#listaPedidoVazio {
+    overflow: auto;
+    background-image:url(../pics/caderno.jpg);
+    border:2px solid black;
+    width:330px;
+    height:140px;
+    z-index:5;
+    position:absolute;
+    margin-top:-10px;
+    margin-left:15px;
+    padding:5px;
+}
+
+#textoPedido{
+    margin-left:20px;
+    margin-top:-10px;
+
+}
+
+.naLista{
+    text-align:left;
+    float:left;
+    height:13px;
+    width:auto;
+    display: inline-block;
+    vertical-align: top;
+    padding:5px;
+    margin-top:0px;
+}
+
+.naListaProduto{
+    text-align:left;
+    float:left;
+    height:13px;
+    width:164px;
+    display: inline-block;
+    margin-top:0px;
+    vertical-align: top;
+    padding:5px;
+}
+
+#divTotal{
+    width:180px;
+    height:50px;
+    z-index:5;
+    position:absolute;
+    margin-top:-10px;
+    margin-left:395px;
+    padding:5px;
+}
+
+.noTotal{
+    text-align:left;
+    float:left;
+    height:13px;
+    width:auto;
+    display: inline-block;
+    vertical-align: top;
+    padding:5px;
+    margin-top:-10px;
+}
+
+.noTotalValor{
+    background-color:white;
+    border:1px solid black;
+    text-align:right;
+    float:left;
+    height:13px;
+    width:80px;
+    display: inline-block;
+    margin-top:-10px;
+    vertical-align: top;
+    padding:5px;
+}
+
+#noTotalValorConta{
+    background-color:white;
+    border:1px solid black;
+    text-align:right;
+    float:left;
+    height:13px;
+    width:80px;
+    display: inline-block;
+    margin-top:-10px;
+    vertical-align: top;
+    padding:5px;
+}
+
+#listaConfirmacao{
+    font-size: 12px;
+    background-image:url(../pics/caderno2.jpg);
+    overflow: auto;
+    position:absolute;
+    height:160px;
+    width:185px;
+    margin-top:20px;
+    margin-left:20px;
+    padding:5px;
+    z-index:10;
+}
+
+#confirmacao{
+    border-radius: 15px;
+    background-image:url(../pics/fundoMenu.png);
+    border:2px solid black;
+    width:400px;
+    height:208px;
+    margin-top:200px;
+    margin-left:250px;
+    position:absolute;
+    z-index:10;
+    
+}
+
+#confirmacaoRemover{
+    border-radius: 15px;
+    background-image:url(../pics/fundoMenu.png);
+    border:2px solid black;
+    width:400px;
+    height:208px;
+    margin-top:200px;
+    margin-left:250px;
+    position:absolute;
+    z-index:10;
+    
+}
+#confirmacaoCancelar{
+    border-radius: 15px;
+    background-image:url(../pics/fundoMenu.png);
+    border:2px solid black;
+    width:400px;
+    height:208px;
+    margin-top:200px;
+    margin-left:250px;
+    position:absolute;
+    z-index:10;
+    
+}
+
+#msgConfirmacao{
+	text-align:center;
+}
+
+#msgConfirmacaoRemover{
+	text-align:center;
+}
+
+#msgConfirmacaoCancelar{
+	text-align:center;
+}
+
+/*VOLTAR*/
+.voltarPrincipal{
+    font-size:15px;
+    position:absolute;
+    margin-top:8px;
+    float:left;
+    margin-left:30px;
+    display:none;
+    z-index:2;
+    cursor:pointer;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #ececec;
+    text-shadow: 1px 1px 1px rgba(0,0,0, .5);
+    cursor:pointer;
+
+}
+
+.voltarBebidas{
+   font-size:15px;
+    position:absolute;
+    margin-top:8px;
+    float:left;
+    margin-left:30px;
+    display:none;
+    z-index:2;
+    cursor:pointer;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #ececec;
+    text-shadow: 1px 1px 1px rgba(0,0,0, .5);
+    cursor:pointer;
+}
+
+.voltarComidas{
+    font-size:15px;
+    position:absolute;
+    margin-top:8px;
+    float:left;
+    margin-left:30px;
+    display:none;
+    z-index:2;
+    cursor:pointer;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #ececec;
+    text-shadow: 1px 1px 1px rgba(0,0,0, .5);
+    cursor:pointer;
+}
+
+/*BOTOES*/
+#botaoConfirmar{
+    position:relative;
+    margin-top:20px;
+    margin-left:230px;
+    z-index:2;
+    cursor:pointer;
+}
+#botaoVoltar{
+    position:relative;
+    margin-top:5px;
+    margin-left:230px;
+    z-index:2;
+    cursor:pointer;
+}
+
+#botaoPedir{
+    position:absolute;
+    margin-top:60px;
+    margin-left:400px;
+    z-index:2;
+    display:none;
+    cursor:pointer;
+}
+
+#botaoCancelar{
+    position:absolute;
+    margin-top:100px;
+    margin-left:400px;
+    z-index:2;
+    cursor:pointer;
+}
+
+#botaoOK{
+    position:relative;
+    margin-top:30px;
+    margin-left:140px;
+    z-index:2;
+    cursor:pointer;
+}
+
+.botaoConfirmacaoRemover{
+    position:relative;
+    margin-top:20px;
+    margin-left:150px;
+    z-index:2;
+    cursor:pointer;
+}
+.botaoConfirmacaoCancelar{
+    position:relative;
+    margin-top:20px;
+    margin-left:150px;
+    z-index:2;
+    cursor:pointer;
+}
+
+.botaoCancelarRemover{
+    position:relative;
+    margin-top:30px;
+    margin-left:150px;
+    z-index:2;
+    cursor:pointer;
+}
+
+.botaoCancelarCancelar{
+    position:relative;
+    margin-top:30px;
+    margin-left:150px;
+    z-index:2;
+    cursor:pointer;
+}
+
+.sair{
+    width:25px;
+    height:25px;
+    position:absolute;
+    margin-top:5px;
+    margin-left:10px;
+    float:left;
+    display:none;
+    z-index:20;
+    cursor:pointer;
+    font-size:19px;
+}

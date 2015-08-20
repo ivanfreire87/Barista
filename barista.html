@@ -1,0 +1,439 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>    
+    <title>BarISTa</title>
+
+    <!--JS-->
+    <script type='text/javascript' src="JS/jquerylib.js"></script>
+    <script type='text/javascript' src="JS/jquery-1.9.1.js"></script>
+    <script type='text/javascript' src="JS/jquery-ui.js"></script>
+    <script type="text/javascript" src="JS/sly.min.js"></script>
+    <script type="text/javascript" src="JS/dragscrollable.js"></script>
+    <script type="text/javascript" src="JS/baristaScripts.js"></script>
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="CSS/baristaStyle.css"/>
+    <link rel="stylesheet" type="text/css" href="CSS/scrollHorizontalStyle.css"/>
+    <link rel="stylesheet" type="text/css" href="CSS/musicasStyle.css"/>
+    <link rel="stylesheet" type="text/css" href="CSS/menuStyle.css"/>
+
+    
+    
+</head>
+<body>
+    <!--ECRA DA MESA INTERACTIVA-->
+    <div id="help"></div>
+    <div id="ecra">
+        
+        <!--A TOCAR-->
+        <div id="musicatopo" class="audio-player">
+            <h2 class="letra">A Tocar<br /></h2>
+            <h1 class="letra musicaToca">Hardwell - Spaceman</h1>
+            <img class="cover" src="pics/Spaceman.jpg" alt="">
+            <audio id="musicaFundo" autoplay>
+                <source id="musicaTocaSom" src="music/spaceman.mp3">
+            </audio>
+
+
+            <div class="timer"><span class="timerN">00:</span><span id="count">15</span></div>
+        </div>
+
+        <div id="jukebox" class="audio-player">
+            <h2 class="letra">A Tocar<br /></h2>
+            <div id="musicaNomeToca"><h1 class="letra musicaToca">Hardwell - Spaceman</h1></div>
+            <img class="cover" src="pics/Spaceman.jpg" alt="">
+            <div class="timer"><span class="timerN">00:</span><span id="count2">15</span></div>
+        </div>
+
+
+
+
+        <!--BOTOES-->
+        <!--Conta-->
+        <div class="letra"  id="conta" style="margin-top: 10px; margin-left: 30px;"><img style="width:50px; height:50px;" src="pics/conta.png" /><br>Conta</div>
+		<div id="divConta">
+            <div class="sairConta botao letra">X</div>
+			<p style="text-align:center;" class="letra"><strong>Conta</strong></p>
+			<div id="listaConta"></div>
+			<button id="pagarConta">Pagar</button>
+			<div id="divTotalConta">
+                <div>
+                    <div class="noTotal letra">TOTAL:</div>
+                    <div style="clear:both">&nbsp;</div>
+                    <div id="noTotalValorConta"></div>
+                    <div class="noTotal letra">€</div>
+                </div>
+            </div>
+		</div>
+		
+		
+        <div class="letra" id="ajuda"><img style="width:50px; height:50px;" src="pics/help.png" /><br>Ajuda</div>
+		<button style="display:none" id="conta">Conta</button>
+		
+
+ 
+        <div class="letra" id="divMenuButton">
+            <!--X de sair-->
+            <div class="sair botao letra">X</div>
+            <p id="botaoMenu"><strong>Menu</strong></p>
+        </div>
+        
+        <div class="letra" id="divMusicasButton">
+            <!--X de sair-->
+            <div class="sairMusicas botao letra">X</div>
+            <p id="botaoMusicas">Músicas</p>
+        </div>
+        <!--JUKEBOX-->
+        <div id="divJukebox">
+            <!--<img class="button" src="pics/jukebox.png" />-->
+        </div>
+    
+<!------------------------------------------------------------------------MUSICAS-------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+        <!--MUSICAS PRINCIPAL-->
+        <div class="divMusicas" id="divMusicasPrincipal">
+			<!-----------Estrutura do Menu -------------------------->
+					
+            <!--Voltar-->
+            <div class="botao letra" id="voltarMenuMusica"><img style="width:40px; height:30px" src="pics/voltar.png"><div style="margin-top:-5px;">Voltar</div></div>
+
+			<div class="divMusicasSeguintes">           
+				<div class="letra" id="textoMusicasSeguintes" ><p>Músicas Seguintes:</p></div>
+
+				<ul id="musicasMP" class="listaPedidoMusica"></ul>
+                <ul class="listaAleatorio"><li>A tocar aleatóriamente. Vote numa música para tocar a seguir.</li></ul>
+
+			</div>
+
+			
+			
+			<!------Menu Principal ----------->
+			
+			<p id="musicasTitulo" class="titulo letra"><strong>Músicas</strong></p>
+			
+            <div id="listaGeneros" class="listaOuter listaMusicas">
+                <!--Musicas principal-->
+                <div class="listaInner">
+                    <div class="musica" id="electronica"><img style="width:100%; height:100%" src="pics/electronica.jpg" /><br>Electrónica</div>
+					<div class="musica" id="rock"><img style="width:100%; height:100%" src="pics/rock.jpg" /><br>Rock</div>
+					<div class="musica" id="80s"><img style="width:100%; height:100%" src="pics/80's.jpg" /><br>80's</div>
+                </div>
+            </div>
+			
+			<!----------Menu electronica--------------->
+			
+			<p id="electronicaTitulo" class="titulo letra" style="display:none"><strong>Electrónica</strong></p>
+			
+			<div id="listaElectronica" style="display: none" class="listaOuter listaMusicas">
+                <!--Musicas electronica-->
+                <div class="listaInner">
+                    <div class="musica musicaLista" id="animals"><img style="width:100%; height:100%" src="pics/animals.jpg" /><br>Animals</div>
+					<div class="musica musicaLista" id="getLucky"><img style="width:100%; height:100%" src="pics/getLucky.jpg" /><br>Get Lucky</div>
+                    <div class="musica musicaLista" id="noBeef"><img style="width:100%; height:100%" src="pics/noBeef.jpg" /><br>No Beef</div>
+					<div class="musica musicaLista" id="playHard"><img style="width:100%; height:100%" src="pics/playHard.jpg" /><br>Play Hard</div>
+					<div class="musica musicaLista" id="spaceman"><img style="width:100%; height:100%" src="pics/spaceman.jpg" /><br>Spaceman</div>
+                    <div class="musica musicaLista" id="youMake"><img style="width:100%; height:100%" src="pics/youMake.jpg" /><br>You Make Me</div>					
+                </div>
+            </div>
+
+            <!----------Menu 80's'--------------->
+
+            <p id="80sTitulo" class="titulo letra" style="display:none"><strong>80's'</strong></p>
+
+            <div id="lista80s" style="display: none" class="listaOuter listaMusicas">
+                <!--Musicas 80's'-->
+                <div class="listaInner">
+                    <div class="musica musicaLista" id="dontYou"><img style="width:100%; height:100%" src="pics/dontYou.jpg" /><br>Dont You</div>
+                    <div class="musica musicaLista" id="spin"><img style="width:100%; height:100%" src="pics/spin.jpg" /><br>You Spin<br>Me Round</div>
+                    <div class="musica musicaLista" id="timeAfterTime"><img style="width:100%; height:100%" src="pics/timeAfterTime.jpg" /><br>Time After Time</div>
+                </div>
+            </div>
+			
+			<!---------Menu Rock --------------------->
+			
+			<p id="rockTitulo" class="titulo letra" style="display:none"><strong>Rock</strong></p>
+			
+			<div id="listaRock" style="display: none" class="listaOuter listaMusicas">
+                <!--Musicas rock-->
+                <div class="listaInner">
+                    <div class="musica musicaLista" id="plug"><img style="width:100%; height:100%" src="pics/plug.jpg" /><br>Plug In<br> Baby</div>
+                    <div class="musica musicaLista" id="radioactive"><img style="width:100%; height:100%" src="pics/radioactive.jpg" /><br>Radioactive</div>
+                    <div class="musica musicaLista" id="reflektor"><img style="width:100%; height:100%" src="pics/reflektor.jpg" /><br>Reflektor</div>
+                    <div class="musica musicaLista" id="safeAndSound"><img style="width:100%; height:100%" src="pics/safeAndSound.jpg" /><br>Safe And<br> Sound</div>
+                    <div class="musica musicaLista" id="sail"><img style="width:100%; height:100%" src="pics/sail.jpg" /><br>Sail</div>
+                    <div class="musica musicaLista" id="team"><img style="width:100%; height:100%" src="pics/team.jpg" /><br>Team</div>
+
+                </div>
+            </div>
+					
+            <!--INFORMACAO DA MUSICA-->
+            <div id="divMusicasInfo">
+                <div id="musicaPic">pic</div>
+                <div class="letra" id="musicaArtista"></div>
+                <div class="letra" id="musicaNome"></div>
+                <div id="artistaInfo"></div>
+            </div>
+            
+                        
+        </div>
+
+        
+
+<!------------------------------------------------------------------------MENU-------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+        <!--MENU PRINCIPAL-->
+        <div class="divMenu" id="divMenuPrincipal"><div class="tituloMenu">Menu</div>
+            <div class="listaOuter">
+                <!--Lista principal-->
+                <div class="listaInner">
+                    <div class="produto" id="bebidas"><img style="width:100%; height:100%" src="pics/bebidas.jpg" /><br>Bebidas</div>
+                    <div class="produto" id="comidas"><img style="width:100%; height:100%" src="pics/comida.jpg" /><br>Comidas</div>
+                </div>
+            </div>
+          
+        </div>
+
+        <!--BEBIDAS-->
+        <div class="divMenu" id="divMenuBebidas"><div class="tituloMenu">Bebidas</div>
+            <div class="listaOuter">
+                <!--Lista de bebidas-->
+                <div class="listaInner">
+                    <div class="produto" id="cerveja"><img style="width:100%; height:100%" src="pics/cervejas.jpg" /><br>Cervejas</div>
+                    <div class="produto" id="cocktails"><img style="width:100%; height:100%" src="pics/cocktails.jpg" /><br>Cocktails</div>
+                    <div class="produto" id="longDrinks"><img style="width:100%; height:100%" src="pics/longDrinks.jpg" /><br>LongDrinks</div>
+                    <div class="produto" id="refrigerantes"><img style="width:100%; height:100%" src="pics/refrigerantes.jpg" /><br>Refrigerantes</div>
+                </div>
+            </div>
+            <div class="botao voltarPrincipal"><img style="width:40px; height:30px" src="pics/voltar.png"><div style="margin-top:-5px;">Voltar</div></div>
+        </div>
+
+        <!--COMIDAS-->
+        <div class="divMenu" id="divMenuComidas"><div class="tituloMenu">Comidas</div>
+            <div class="listaOuter">
+                <!--Lista de comidas-->
+                <div class="listaInner">
+                    <div class="produto" id="aperitivos"><img style="width:100%; height:100%" src="pics/aperitivos.jpg" /><br>Aperitivos</div>
+                    <div class="produto" id="cachorros"><img style="width:100%; height:100%" src="pics/cachorros.jpg" /><br>Cachorros</div>
+                    <div class="produto" id="hamburguers"><img style="width:100%; height:100%" src="pics/hamburguer.jpg" /><br>Hamburguers</div>
+                    <div class="produto" id="tostas"><img style="width:100%; height:100%" src="pics/tostas.jpg" /><br>Tostas</div>
+                </div>
+            </div>
+            <div class="botao voltarPrincipal"><img style="width:40px; height:30px" src="pics/voltar.png"><div style="margin-top:-5px;">Voltar</div></div>
+        </div>
+
+        <!--APERITIVOS-->
+        <div class="divMenu" id="divMenuAperitivos"><div class="tituloMenu">Aperitivos</div>
+            <div class="listaOuter">
+                <!--Lista de aperitivos-->
+                <div class="listaInner">
+                    <div class="produto produtoLista letraMenu" id="amendoim"><img style="width:100%; height:100%" src="pics/amendoins.jpg" /><br>Amendoins<br><br>1.20€</div>
+                    <div class="produto produtoLista letraMenu" id="batata"><img style="width:100%; height:100%" src="pics/chips.jpg" /><br>Batatas Fritas<br><br>1.00€</div>
+                    <div class="produto produtoLista letraMenu" id="caju"><img style="width:100%; height:100%" src="pics/cajus.jpg" /><br>Cajus<br><br>1.20€</div>
+                    <div class="produto produtoLista letraMenu" id="pistachio"><img style="width:100%; height:100%" src="pics/pistache.jpg" /><br>Pistachios<br><br>1.20€</div>
+                </div>
+            </div>
+            <div class="botao voltarComidas"><img style="width:40px; height:30px" src="pics/voltar.png"><div style="margin-top:-5px;">Voltar</div></div>
+        </div>
+
+        <!--HAMBURGUERS-->
+        <div class="divMenu" id="divMenuHamburguers"><div class="tituloMenu">Hamburguers</div>
+            <div class="listaOuter">
+                <!--Lista de hamburguers-->
+                <div class="listaInner">
+                    <div class="produto produtoLista letraMenu" id="hamburguerSimples"><img style="width:100%; height:100%" src="pics/hamburguerSimples.jpg" /><br>Simples<br><br>2.50€</div>
+                    <div class="produto produtoLista letraMenu" id="hamburguerQueijo"><img style="width:100%; height:100%" src="pics/hamburguerQueijo.jpg" /><br>c/ Queijo<br><br>3.00€</div>
+                    <div class="produto produtoLista letraMenu" id="hamburguerBacon"><img style="width:100%; height:100%" src="pics/hamburguerBacon.jpg" /><br>c/ Bacon<br><br>3.50€</div>
+                    <div class="produto produtoLista letraMenu" id="hamburguerTudo"><img style="width:100%; height:100%" src="pics/hamburguerTudo.jpg" /><br>c/ Tudo<br><br>4.00€</div>
+                </div>
+            </div>
+            <div class="botao voltarComidas"><img style="width:40px; height:30px" src="pics/voltar.png"><div style="margin-top:-5px;">Voltar</div></div>
+
+        </div>
+
+        <!--CACHORROS-->
+        <div class="divMenu" id="divMenuCachorros"><div class="tituloMenu">Cachorros</div>
+            <div class="listaOuter">
+                <!--Lista de cachorros-->
+                <div class="listaInner">
+                    <div class="produto produtoLista letraMenu" id="cachorroSimples"><img style="width:100%; height:100%" src="pics/cachorroSimples.jpg" /><br>Simples<br><br>2.50€</div>
+                    <div class="produto produtoLista letraMenu" id="cachorroTudo"><img style="width:100%; height:100%" src="pics/cachorroTudo.jpg" /><br>c/ Tudo<br><br>3.50€</div>
+                </div>
+            </div>
+            <div class="botao voltarComidas"><img style="width:40px; height:30px" src="pics/voltar.png"><div style="margin-top:-5px;">Voltar</div></div>
+
+        </div>
+
+        <!--TOSTAS-->
+        <div class="divMenu" id="divMenuTostas"><div class="tituloMenu">Tostas</div>
+            <div class="listaOuter">
+                <!--Lista de tostas-->
+                <div class="listaInner">
+                    <div class="produto produtoLista letraMenu" id="tostaFiambre"><img style="width:100%; height:100%" src="pics/tostaFiambre.jpg" /><br>c/ Fiambre<br><br>2.00€</div>
+                    <div class="produto produtoLista letraMenu" id="tostaQueijo"><img style="width:100%; height:100%" src="pics/tostaQueijo.jpg" /><br>c/ Queijo<br><br>2.00€</div>
+                    <div class="produto produtoLista letraMenu" id="tostaMista"><img style="width:100%; height:100%" src="pics/tostaMista.jpg" /><br>Mista<br><br>2.50€</div>
+                </div>
+            </div>
+            <div class="botao voltarComidas"><img style="width:40px; height:30px" src="pics/voltar.png"><div style="margin-top:-5px;">Voltar</div></div>
+
+        </div>
+        
+        <!--CERVEJAS-->
+        <div class="divMenu" id="divMenuCervejas"><div class="tituloMenu">Cervejas</div>
+            <div class="listaOuter">
+                <!--Lista de cervejas-->
+                <div class="listaInner">
+                    <div class="produto produtoLista letraMenu" id="budweiser"><img style="width:100%; height:100%" src="pics/budweiser.jpg" /><br>Budweiser<br><br>2.00€</div>
+                    <div class="produto produtoLista letraMenu" id="cheers"><img style="width:100%; height:100%" src="pics/cheers.jpg" /><br>Cheers<br><br>2.00€</div>
+                    <div class="produto produtoLista letraMenu" id="corona"><img style="width:100%; height:100%" src="pics/corona.jpg" /><br>Corona<br><br>2.00€</div>
+                    <div class="produto produtoLista letraMenu" id="heineken"><img style="width:100%; height:100%" src="pics/heineken.jpg" /><br>Heineken<br><br>2.00€</div>
+                    <div class="produto produtoLista letraMenu" id="sagres"><img style="width:100%; height:100%" src="pics/sagres.jpg" /><br>Sagres<br><br>2.00€</div>
+                    <div class="produto produtoLista letraMenu" id="superBock"><img style="width:100%; height:100%" src="pics/superbock.jpg" /><br>Super Bock<br><br>2.00€</div>
+                </div>
+            </div>
+            <div class="botao voltarBebidas"><img style="width:40px; height:30px" src="pics/voltar.png"><div style="margin-top:-5px;">Voltar</div></div>
+
+        </div>
+
+        <!--COCKTAILS-->
+        <div class="divMenu" id="divMenuCocktails"><div class="tituloMenu">Cocktails</div>
+            <div class="listaOuter">
+                <!--Lista de cocktails-->
+                <div class="listaInner">
+                    <div class="produto produtoLista letraMenu" id="caipirinha"><img style="width:100%; height:100%" src="pics/caipirinha.jpg" /><br>Caipirinha<br><br>6.00€</div>
+                    <div class="produto produtoLista letraMenu" id="cosmopolitan"><img style="width:100%; height:100%" src="pics/cosmopolitan.jpg" /><br>Cosmopolitan <br><br>6.00€</div>
+                    <div class="produto produtoLista letraMenu" id="manhattan"><img style="width:100%; height:100%" src="pics/manhattan.jpg" /><br>Manhattan<br><br>6.00€</div>
+                    <div class="produto produtoLista letraMenu" id="margarita"><img style="width:100%; height:100%" src="pics/margarita.jpg" /><br>Margarita<br><br>6.00€</div>
+                    <div class="produto produtoLista letraMenu" id="martini"><img style="width:100%; height:100%" src="pics/martini.jpg" /><br>Martini<br><br>6.00€</div>
+                    <div class="produto produtoLista letraMenu" id="mojito"><img style="width:100%; height:100%" src="pics/mojito.jpg" /><br>Mojito<br><br>6.00€</div>
+                    <div class="produto produtoLista letraMenu" id="morangoska"><img style="width:100%; height:100%" src="pics/morangoska.jpg" /><br>Morangoska<br><br>6.00€</div>
+                    <div class="produto produtoLista letraMenu" id="pinaColada"><img style="width:100%; height:100%" src="pics/pinaColada.jpg" /><br>Piña Colada<br><br>6.00€</div>
+
+                </div>
+            </div>
+            <div class="botao voltarBebidas"><img style="width:40px; height:30px" src="pics/voltar.png"><div style="margin-top:-5px;">Voltar</div></div>
+
+        </div>
+
+        <!--LONG DRINKS-->
+        <div class="divMenu" id="divMenuLongDrinks"><div class="tituloMenu">Long Drinks</div>
+            <div class="listaOuter">
+                <!--Lista de Long Drinks-->
+                <div class="listaInner">
+                    <div class="produto produtoLista letraMenu" id="gin"><img style="width:100%; height:100%" src="pics/vodkaLimao.jpg" /><br>Gin<br><br>6.00€</div>
+                    <div class="produto produtoLista letraMenu" id="rumCola"><img style="width:100%; height:100%" src="pics/rumCola.jpg" /><br>Rum Cola<br><br>6.00€</div>
+                    <div class="produto produtoLista letraMenu" id="vodkaLaranja"><img style="width:100%; height:100%" src="pics/vodkaLaranja.jpg" /><br>Vodka Limão<br><br>6.00€</div>
+                    <div class="produto produtoLista letraMenu" id="vodkaRedBull"><img style="width:100%; height:100%" src="pics/vodkaRedbull.jpg" /><br>Vodka Red Bull<br><br>6.00€</div>
+                </div>
+            </div>
+            <div class="botao voltarBebidas"><img style="width:40px; height:30px" src="pics/voltar.png"><div style="margin-top:-5px;">Voltar</div></div>
+
+        </div>
+
+        <!--REFRIGERANTES-->
+        <div class="divMenu" id="divMenuRefrigerantes"><div class="tituloMenu">Refrigerantes</div>
+            <div class="listaOuter">
+                <!--Lista de refrigerantes-->
+                <div class="listaInner">
+                    <div class="produto produtoLista letraMenu" id="7up"><img style="width:100%; height:100%" src="pics/7up.jpg" /><br>7 up<br><br>2.00€</div>
+                    <div class="produto produtoLista letraMenu" id="cocaCola"><img style="width:100%; height:100%" src="pics/cocaCola.jpg" /><br>Coca Cola<br><br>2.00€</div>
+                    <div class="produto produtoLista letraMenu" id="colaZero"><img style="width:100%; height:100%" src="pics/colaZero.jpg" /><br>Coca Cola Zero<br><br>2.00€</div>
+                    <div class="produto produtoLista letraMenu" id="fantaAnanas"><img style="width:100%; height:100%" src="pics/fantaAnanas.jpg" /><br>Fanta Ananás<br><br>2.00€</div>
+                    <div class="produto produtoLista letraMenu" id="fantaLaranja"><img style="width:100%; height:100%" src="pics/fantaLaranja.jpg" /><br>Fanta Laranja<br><br>2.00€</div>
+                    <div class="produto produtoLista letraMenu" id="fantaUva"><img style="width:100%; height:100%" src="pics/fantaUva.jpg" /><br>Fanta Uva<br><br>2.00€</div>
+                    <div class="produto produtoLista letraMenu" id="guarana"><img style="width:100%; height:100%" src="pics/guarana.jpg" /><br>Guaraná<br><br>2.00€</div>
+                    <div class="produto produtoLista letraMenu" id="pepsi"><img style="width:100%; height:100%" src="pics/pepsi.jpg" /><br>Pepsi<br><br>2.00€</div>
+                    <div class="produto produtoLista letraMenu" id="pepsiTwist"><img style="width:100%; height:100%" src="pics/pepsiTwist.jpg" /><br>Pepsi Twist<br><br>2.00€</div>
+                    <div class="produto produtoLista letraMenu" id="sumolAnanas"><img style="width:100%; height:100%" src="pics/sumolAnanas.jpg" /><br>Sumol Ananás<br><br>2.00€</div>
+                    <div class="produto produtoLista letraMenu" id="sumolLaranja"><img style="width:100%; height:100%" src="pics/sumolLaranja.jpg" /><br>Sumol Laranja<br><br>2.00€</div>
+                </div>
+            </div>
+            <div class="botao voltarBebidas"><img style="width:40px; height:30px" src="pics/voltar.png"><div style="margin-top:-5px;">Voltar</div></div>
+
+        </div>
+
+        <!--PEDIDO-->
+        <div id="divPedido">
+            <div id="divPedidoIn">
+                <div id="textoPedido"><p class="letra">Pedido</p></div>
+                <div id="listaPedido"></div>
+
+                <!--Preco total-->
+                <div id="divTotal">
+                    <div>
+                        <div class="noTotal letra">Total:</div>
+                        <div style="clear:both">&nbsp;</div>
+                        <div class="noTotalValor"></div>
+                        <div class="noTotal letra">€</div>
+                    </div>
+                </div>
+
+                <!--Pedir-->
+                <div id="botaoPedir">
+                    <button class="botao">Pedir</button>
+                </div>
+
+                <!--Cancelar-->
+                <div id="botaoCancelar">
+                    <button class="botao">Cancelar Pedido</button>
+                </div>
+            </div>
+
+            <!--PEDIDO VAZIO-->
+            <div id="divPedidoVazio">
+                <div id="textoPedido"><p class="letra">Pedido</p></div>
+                <div id="listaPedidoVazio"></div>
+            </div>
+        </div>
+        
+
+        <!--CONFIRMACAO-->
+        <div style="display:none"id="confirmacao">
+            <div style="border:2px solid black" id="listaConfirmacao"></div>
+
+            <!--Preco total-->
+            <div style="margin-top:40px; margin-left:230px;"id="divTotal2">
+                <div>
+                    <div class="noTotal letra">Total:</div>
+                    <div style="clear:both">&nbsp;</div>
+                    <div class="noTotalValor"></div>
+                    <div class="noTotal letra">€</div>
+                </div>
+            </div>
+
+            <!--Mensagem de confirmacao-->
+			<div id="msgConfirmacao">
+                <p class="letra"><strong><br>Pedido efectuado!</strong></p>
+				<p class="letra"><strong>Aguarde pelo seu pedido</strong></p>
+			</div>
+            
+            <button class="botao" id="botaoConfirmar" type="button">Confirmar</button>
+			<button class="botao" id="botaoVoltar" type="button">Voltar</button>
+			<button class="botao" id="botaoOK" type="button">OK</button>
+        </div>
+
+
+
+        <div style="display:none" id="confirmacaoRemover">
+
+            <div id="msgConfirmacaoRemover">
+                <p class="letra"><strong id="mensagemConfirmacaoRemover"><br>--</strong></p>
+            </div>
+
+            <button class="botao botaoCancelarRemover" type="button">Cancelar</button>
+            <button class="botao botaoConfirmacaoRemover" type="button">Confirmar</button>
+        </div>
+
+        <div style="display:none" id="confirmacaoCancelar">
+
+            <div id="msgConfirmacaoCancelar">
+                <p class="letra"><strong id="mensagemConfirmacaoCancelar"><br>Vai cancelar o seu pedido. Tem a certeza?</strong></p>
+            </div>
+
+            <button class="botao botaoCancelarCancelar" type="button">Cancelar</button>
+            <button class="botao botaoConfirmacaoCancelar" type="button">Confirmar</button>
+        </div>
+      
+    </div>
+</body>
+</html>
